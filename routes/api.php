@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Esp32GetController;
 use App\Http\Controllers\Esp32SendController;
 use App\Http\Controllers\Esp32ReceiveController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,5 +27,10 @@ use App\Http\Controllers\Esp32ReceiveController;
 
 Route::post('/esp32/receive', [Esp32GetController::class, 'receiveData'])->name("receive.esp");
 Route::post('/esp32/send', [Esp32SendController::class, 'sendData'])->name("send.esp");
+
+
+
+Route::post('/esp32/send_data_iot', [HomeController::class, 'get_data_iot']);
+
 
 
