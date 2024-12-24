@@ -24,3 +24,4 @@ Route::post('/login/user',[UserLoginController::class,'login_user'])->name('logi
 
 Route::get('/logout',[UserLoginController::class,'logout'])->name('logout');
 Route::get('/home',[HomeController::class,'home'])->name('home');
+

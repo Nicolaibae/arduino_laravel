@@ -30,7 +30,9 @@ Route::post('/esp32/send', [Esp32SendController::class, 'sendData'])->name("send
 
 
 
-Route::post('/esp32/send_data_iot', [HomeController::class, 'get_data_iot']);
+Route::get('/esp32/send_data_iot', [HomeController::class, 'get_data_iot']);
+Route::post('/esp32/send_data_iot2', [HomeController::class, 'handleApi'])->name('test.callApi');
 
 
-
+// Route::post('/fetch-and-store', [DistanceController::class, 'fetchAndStoreData']);
+// Route::get('/fetch-and-store', [DistanceController::class, 'fetchAndStoreData']);
